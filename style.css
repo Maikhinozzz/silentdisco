@@ -1,0 +1,606 @@
+/* Algemene opmaak voor de hele website */
+html, body {
+    padding: 0; 
+    margin: 0; 
+    background-color: #141414;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Patrick Hand SC', cursive;
+    font-weight: 300;
+}
+
+button {
+    font-family: 'Patrick Hand SC', cursive;
+    font-weight: 300;
+}
+
+/* --- Navigatie bar sectie: styling voor de navigatiebalk --- */
+#navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+    align-items: center;
+    height: 125px;
+    position: relative;
+}
+
+#navbar .navlogo {
+    height: auto; 
+}
+
+#menu-icon {
+    font-size: 30px;
+    display: none; 
+    cursor: pointer;
+}
+
+#menu-links {
+    display: flex;
+    width: 50%; 
+    justify-content: space-between; 
+}
+
+#menu-links a {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#menu-links a:hover {
+    color: gray;
+}
+
+#social-icons {
+    display: flex; 
+    gap: 40px;
+}
+
+.navsvg {
+    height: 25px;
+    width: 25px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* --- Hero sectie op de homepage: achtergrond en contentstyling --- */
+#hero {
+    background-image: url('images/hero-home.png');
+    padding: 0% 5% 0% 5%;
+    margin-top: -125px;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.hero-content {
+    max-width: 450px;
+}
+
+.hero-content h1 {
+    font-size: 100px;
+    line-height: 70px;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    margin-top: 5%;
+    margin-bottom: 20%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.hero-content button {
+    font-size: 30px;
+    width: 180px;
+    height: 50px;
+    background-color: #29867D;
+    color: white; 
+    border: none; 
+    text-align: center; 
+    line-height: 50px;
+    cursor: pointer;
+    outline: none;
+}
+
+.hero-content button:hover {
+    color: black;
+}
+
+button.pulse {
+    animation: pulse 1.5s ease-in-out infinite; /* Voeg infinite toe om de animatie te laten herhalen */
+}
+
+/* --- Home Info sectie: layout van informatieblok op de homepage --- */
+#homeinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    padding: 0 5%;
+    height: 100vh;
+    background-color: #141414;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.infoblob, .infodance {
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 1;
+}
+
+.infoblob {
+    transform: scale(0);
+    transition: transform 0.8s ease-out; 
+}
+
+.infoblob.grow {
+    transform: scale(1); 
+}
+
+.djanimated img {
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.djanimated img.slide-in {
+    animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+/* --- Carousel sectie: styling voor de DJ-carousel --- */
+#carouseldj {
+    position: relative;
+    background-image: url('images/carousel.svg');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    padding: 0 5%;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.carousel-card {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselbuttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #29867D;
+}
+
+.carouselbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.resizecarousel {
+    margin-left: -150px;
+}
+
+.djanimated {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* --- Footer sectie: layout en styling voor de footer --- */
+footer {
+    z-index: 10;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 10% 0% 10%;
+    align-items: center;
+}
+
+footer h1 {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+}
+
+footer hr {
+    border: none;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px; 
+    width: 60%;
+    margin: 0;
+}
+
+.footericon {
+    display: flex;
+    line-height: 20px;
+}
+
+.footericon img {
+    margin-right: 10px; /* Add right margin to create a gap between the icon and the text */
+}
+
+footer .navsvg {
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+footer form input {
+    border: none;
+    background-color: transparent;
+    width: 400px;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+footer form hr {
+    width: 100%;
+}
+
+footer form input::placeholder {
+    color: lightgray;
+}
+
+footer form button {
+    font-family: 'Patrick Hand SC', cursive; 
+    font-size: 24px; 
+    font-weight: bold;
+    color: white; 
+    background-color: transparent; 
+    border: 2px solid white; 
+    border-radius: 0px;
+    padding: 10px 50px; 
+    text-align: center; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+footer form button:hover {
+    background-color: white; 
+    color: #141414;
+    border-color: white;
+}
+
+/* --- Hero Event sectie: styling voor de DJ-informatie sectie met achtergrond en knoppen --- */
+#heroevent {
+    background-image: url('images/eventhero1.svg');
+    padding: 0% 5% 0% 5%;
+    margin-top: -125px;
+    height: 100vh;
+    display: flex;
+    padding-top: 125px;
+    color: white;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: space-between; 
+}
+
+#heroevent .event1,
+#heroevent .event2,
+#heroevent .event3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#heroevent .event1 {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#heroevent .event1 h1 {
+    font-family: "Piedra", serif;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+#heroevent .event1 img {
+    width: 40%; 
+}
+
+#heroevent .event2 .vinyl {
+    width: 100%;
+}
+
+#heroevent .event2 .vinylbuttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#heroevent .event2 .vinylbuttons img {
+    width: 10%;
+}
+
+#heroevent .event2 .vinylbuttons img:hover {
+    cursor: pointer;
+}
+
+.vinyl {
+    transition: transform 0.5s linear;
+}
+
+.vinyl.rotate {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#heroevent .event3 {
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+#heroevent .event3 .event3outside {
+    border-radius: 10px;
+    background-color: rgba(217, 217, 217, 0.1);
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+#heroevent .event3 .event3play {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 30px;
+}
+
+#heroevent .event3 .event3play:hover {
+    cursor: pointer;
+}
+
+#heroevent .event3 .event3img {
+    width: 30%;
+}
+
+#heroevent .event3 .event3text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#heroevent .event3 .event3text h1,
+#heroevent .event3 .event3text p {
+    margin: 0;
+    padding: 0;
+}
+
+.event3 h1 {
+    font-size: 2vw; /* 5% of the viewport width */
+}
+
+.event3 p {
+    font-size: 1vw; /* 2.5% of the viewport width */
+}
+
+/* --- About DJ sectie: styling voor de informatie over de DJ in de "Over mij" sectie --- */
+#aboutdj {
+    background-image: url('images/eventabout1.svg');
+    padding: 0% 5% 0% 5%;
+    height: 100vh;
+    display: flex;
+    color: white;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: space-between; 
+}
+
+#aboutdj .djimg {
+    flex: 1.5;
+    display: flex;
+}
+
+#aboutdj .djinfo {
+    margin-bottom: 10%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* Initial state of the h1 and p elements */
+#aboutdj h1, #aboutdj p {
+    margin: 0;
+    padding-bottom: 25px;
+    color: transparent;
+    position: relative;
+    -webkit-text-stroke: 1px white; /* Hollow text */
+}
+
+#aboutdj h1 {
+    font-size: 5vw; /* 5% of the viewport width */
+}
+
+#aboutdj p {
+    font-size: 1.5vw; /* 2.5% of the viewport width */
+}
+
+#aboutdj h1::after, #aboutdj p::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0;
+    clip-path: inset(0 100% 0 0); /* Initially hidden */
+}
+
+/* Animation only triggers when the section has the "active" class */
+#aboutdj.active h1::after, #aboutdj.active p::after {
+    animation: fillText 10s ease forwards;
+}
+
+@keyframes fillText {
+    0% {
+        clip-path: inset(0 100% 0 0); /* Hidden */
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Fully visible */
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slight zoom */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#aboutdj .djimg img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#aboutdj.active .djimg img {
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+}
+
+/* --- Media queries voor mobiele weergave --- */
+@media only screen and (max-width: 767px) {
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        top: 125px;
+        left: 0;
+    }
+
+    #menu-links a {
+        padding: 10px 0;
+        font-size: 24px;
+    }
+
+    #navbar {
+        justify-content: space-between;
+    }
+
+    #menu-icon {
+        display: block;
+        color: white;
+    }
+
+    #social-icons {
+        display: none;
+    }
+
+    #navbar .navlogo {
+        height: auto;
+    }
+
+    #homeinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        height: auto;
+        gap: 50px;
+    }
+
+    .infoblob, .infodance {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}

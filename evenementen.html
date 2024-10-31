@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Silent Disco</title>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <img class="navlogo" href="index.html" src="images/logo.svg"/>
+            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+            <div id="menu-links">
+                <a href="index.html">Home</a>
+                <a href="evenementen.html">Evenementen</a>
+                <a href="#section3">Foto's</a>
+            </div>
+            <div id="social-icons">
+                <img class="navsvg" src="images/twitterwhite.svg" alt="Twitter">
+                <img class="navsvg" src="images/instagramwhite.svg" alt="Instagram">
+                <img class="navsvg" src="images/youtubewhite.svg" alt="YouTube">
+            </div>
+        </div>    
+    </nav>
+
+    <section id="heroevent">
+        <div class="event1">
+            <h1>Ricky Gonzalez</h1>
+            <img src="images/soundwave.svg" alt="Soundwave">
+        </div>
+        <div class="event2">
+            <img class="vinyl" id="vinyl" src="images/vinyl.png" alt="Vinyl">
+            <div class="vinylbuttons">
+                <img id="rewind-back" src="images/rewindback.svg" alt="Rewind Back">
+                <img id="play-pause" src="images/play.svg" alt="Play">
+                <img id="rewind-forward" src="images/rewindforward.svg" alt="Rewind Forward">
+            </div>
+        </div>
+        <div class="event3">
+            <div class="event3outside">
+                <img class="event3img" src="images/djsmall1.png" alt="dj1">
+                <img class="event3play" src="images/play.svg" alt="Play">
+                <div class="event3text">
+                    <h1>Ricky Gonzalez</h1><br/>
+                    <p>Zaterdag 5 oktober</p><br/>
+                    <p>19:00</p>
+                </div>
+            </div>
+            <br/>
+            <div class="event3outside">
+                <img class="event3img" src="images/djsmall2.png" alt="dj1">
+                <img class="event3play" src="images/play.svg" alt="Play">
+                <div class="event3text">
+                    <h1>Frans Heijman</h1><br/>
+                    <p>Zaterdag 14 oktober</p><br/>
+                    <p>19:00</p>
+                </div>
+            </div>
+            <br/>
+            <div class="event3outside">
+                <img class="event3img" src="images/djsmall3.png" alt="dj1">
+                <img class="event3play" src="images/play.svg" alt="Play">
+                <div class="event3text">
+                    <h1>Albert Robert</h1><br/>
+                    <p>Zaterdag 21 oktober</p><br/>
+                    <p>19:00</p>
+                </div>
+            </div>
+            <br/>
+            <div class="event3outside">
+                <img class="event3img" src="images/djsmall4.png" alt="dj1">
+                <img class="event3play" src="images/play.svg" alt="Play">
+                <div class="event3text">
+                    <h1>Jordy Bouwmans</h1><br/>
+                    <p>Zaterdag 28 oktober</p><br/>
+                    <p>19:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutdj">
+        <div class="djimg">
+            <img src="images/eventartist1.png" alt="Event artist">
+        </div>
+        <div class="djinfo">
+            <h1 data-text="Over mij!">Over mij!</h1>
+            <p data-text="Ricky Gonzalez, beter bekend als DJ Ricky, ademt muziek. Vanaf het moment dat hij voor het eerst achter de draaitafels stond, wist hij dat dit zijn roeping was. Met zijn unieke mix van house, funk en energieke beats brengt hij elk feest tot leven. Zijn passie voor muziek en zijn vermogen om het publiek mee te slepen in zijn ritme maken hem een echte publieksfavoriet. Waar hij ook draait, DJ Ricky zorgt altijd voor een onvergetelijke vibe!">
+                Ricky Gonzalez, beter bekend als DJ Ricky, ademt muziek. Vanaf het moment dat hij voor het eerst achter de draaitafels stond, wist hij dat dit zijn roeping was. Met zijn unieke mix van house, funk en energieke beats brengt hij elk feest tot leven. Zijn passie voor muziek en zijn vermogen om het publiek mee te slepen in zijn ritme maken hem een echte publieksfavoriet. Waar hij ook draait, DJ Ricky zorgt altijd voor een onvergetelijke vibe!
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h1>Contact:</h1>
+            <hr>
+            <div class="footericon">
+                <img src="images/phone.svg" alt="phone">
+                <p>+31 12 123 12 123</p>
+            </div>
+            <br/>
+            <div class="footericon">
+                <img src="images/mail.svg" alt="mail">
+                <p>info@tesmail.nl</p>
+            </div>
+            <br/>
+            <div class="footericon">
+                <img class="navsvg" src="images/twitter.svg" alt="Twitter">
+                <img class="navsvg" src="images/instagram.svg" alt="Instagram">
+                <img class="navsvg" src="images/youtube.svg" alt="YouTube">
+            </div>
+        </div>
+        <div>
+            <form>
+                <input type="text" name="name" placeholder="Name">
+                <hr><br/>
+                <input type="text" name="email" placeholder="Email">
+                <hr><br/>
+                <input type="text" name="message" placeholder="Message">
+                <hr><br/>
+                <button>Stuur</button>
+            </form>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

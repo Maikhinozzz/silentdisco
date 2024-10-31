@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Silent Disco</title>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <img class="navlogo" href="index.html" src="images/logo.svg"/>
+            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+            <div id="menu-links">
+                <a href="index.html">Home</a>
+                <a href="evenementen.html">Evenementen</a>
+                <a href="#section3">Foto's</a>
+            </div>
+            <div id="social-icons">
+                <img class="navsvg" src="images/twitter.svg" alt="Twitter">
+                <img class="navsvg" src="images/instagram.svg" alt="Instagram">
+                <img class="navsvg" src="images/youtube.svg" alt="YouTube">
+            </div>
+        </div>    
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Ontdek<br/>onze DJ's!</h1>
+            <p>Een goede club draait om gezelligheid, vrienden en vooral muziek! Onze top DJ's zorgen voor de beste beats, 
+                zodat jij de hele nacht kunt dansen. Ontdek hier wie voor jullie draaien en maak je klaar voor een geweldige avond!</p>
+                <a href="evenementen.html">
+                    <button class="pulse">Evenementen</button>
+                </a>
+        </div>
+    </section>
+    
+    <section id="homeinfo">
+        <img class="infoblob" src="images/modified_infohomeblob.svg"/>
+        <img class="infodance" src="images/infohomedance.png"/>
+    </section>
+
+    <section id="carouseldj">
+        <div class="carouseldj-content">
+            <div class="resizecarousel">
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-card">
+                                <a href="evenementen.html">
+                                    <img src="images/dj1.png" alt="DJ 1">
+                                </a>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="evenementen.html">
+                                    <img src="images/dj2.png" alt="DJ 2">
+                                </a>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="evenementen.html">
+                                    <img src="images/dj3.png" alt="DJ 3">
+                                </a>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="evenementen.html">
+                                    <img src="images/dj4.png" alt="DJ 4">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselbuttons">
+                    <button class="prev" onclick="prevSlide()">
+                        <img src="images/leftarrow.svg" alt="Previous">
+                    </button>
+                    <button class="next" onclick="nextSlide()">
+                        <img src="images/rightarrow.svg" alt="Next">
+                    </button>
+                </div>
+            </div>
+            <div class="djanimated">
+                <img src="images/djsvg.svg" alt="onzedjs">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h1>Contact:</h1>
+            <hr>
+            <div class="footericon">
+                <img src="images/phone.svg" alt="phone">
+                <p>+31 12 123 12 123</p>
+            </div>
+            <br/>
+            <div class="footericon">
+                <img src="images/mail.svg" alt="mail">
+                <p>info@tesmail.nl</p>
+            </div>
+            <br/>
+            <div class="footericon">
+                <img class="navsvg" src="images/twitter.svg" alt="Twitter">
+                <img class="navsvg" src="images/instagram.svg" alt="Instagram">
+                <img class="navsvg" src="images/youtube.svg" alt="YouTube">
+            </div>
+        </div>
+        <div>
+            <form>
+                <input type="text" name="name" placeholder="Name">
+                <hr><br/>
+                <input type="text" name="email" placeholder="Email">
+                <hr><br/>
+                <input type="text" name="message" placeholder="Message">
+                <hr><br/>
+                <button>Stuur</button>
+            </form>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
